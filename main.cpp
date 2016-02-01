@@ -12,10 +12,11 @@ int main(int argc, char *argv[]) {
 	for(int i=2; i < argc; i++) {
 		callstr += " " + std::string(argv[i]);
 	}
-	
+
 	QTimer qt = QTimer();
 
 	qt.start();
+	std::system(callstr.c_str());
 	qt.stop();
 
 	return 0;
