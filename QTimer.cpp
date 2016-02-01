@@ -11,6 +11,6 @@ void QTimer::start() {
 void QTimer::stop() {
 	endTime = std::chrono::high_resolution_clock::now();
 	std::cout << "Timer stopped after " 
-		<< std::chrono::nanoseconds(endTime-startTime).count() 
-		<< " nanoseconds" << std::endl;
+		<< std::chrono::nanoseconds(endTime-startTime).count()/1000000.0 
+		<< " milliseconds" << std::endl;
 }
